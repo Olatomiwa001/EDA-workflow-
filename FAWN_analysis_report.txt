@@ -1,0 +1,93 @@
+
+================================================================================
+FAWN WEATHER DATA - EXPLORATORY DATA ANALYSIS REPORT
+================================================================================
+Generated: 2025-12-07 21:51:59
+
+DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Original Records: 6,572
+Final Records: 6,572
+Original Features: 20
+Engineered Features: 27
+Total Features: 47
+
+DATA QUALITY SUMMARY
+--------------------------------------------------------------------------------
+Missing Values Handled: Yes
+Duplicates Removed: Yes
+Outliers Flagged: Yes
+Consistency Issues Fixed: Yes
+Invalid Records Removed: Yes
+
+KEY FINDINGS
+--------------------------------------------------------------------------------
+
+1. TEMPERATURE PATTERNS
+   - Average Temperature: 69.87°F
+   - Temperature Range: 16.56°F to 100.99°F
+   - Most Common Category: Warm
+
+2. PRECIPITATION PATTERNS
+   - Total Rainfall Recorded: 1081.84 inches
+   - Days with Rain: 2370 (36.1%)
+   - Average Rain per Event: 0.456 inches
+
+3. WIND PATTERNS
+   - Average Wind Speed: 5.06 mph
+   - Max Wind Speed: 80.10 mph
+   - Predominant Wind Category: Calm
+
+4. HUMIDITY & COMFORT
+   - Average Humidity: 79.9%
+   - Average Comfort Index: 84.35
+   
+5. STATION ANALYSIS
+   - Number of Stations: 6
+   - Most Active Station: Apopka
+   - Records per Station (avg): 1095
+
+CORRELATIONS DISCOVERED
+--------------------------------------------------------------------------------
+Strong positive correlations:
+- Temperature <-> Dew Point: 0.945
+- Air Temp <-> Soil Temp: 0.920
+
+Strong negative correlations:
+- Temperature <-> Humidity: 0.315
+
+FEATURE ENGINEERING SUMMARY
+--------------------------------------------------------------------------------
+Created Features:
++ Temporal: Year, Month, Season, Quarter, DayOfWeek
++ Temperature: Temp_Range, Temp_Category, Apparent_Temp, Wind_Chill
++ Wind: Wind_Range, Wind_Category, Wind_Chill
++ Precipitation: Rain_Category, Has_Rain, Rain_Intensity
++ Composite: Comfort_Index, Weather_Severity
++ Station-level: Station averages and deviations
++ Interactions: Temp*Humidity, Wind*Rain
+
+DATA QUALITY ACTIONS TAKEN
+--------------------------------------------------------------------------------
+1. Removed 0 rows with data quality issues
+2. Fixed min/max inversions in temperature, wind, and soil temp
+3. Interpolated missing values where appropriate
+4. Flagged extreme outliers for investigation
+5. Validated all measurements within reasonable ranges
+
+RECOMMENDED NEXT STEPS
+--------------------------------------------------------------------------------
+1. Build predictive models for temperature or rainfall
+2. Analyze seasonal patterns in detail
+3. Compare station characteristics and regional differences
+4. Investigate extreme weather events
+5. Create interactive dashboard for stakeholder exploration
+
+FILES GENERATED
+--------------------------------------------------------------------------------
+- FAWN_report_cleaned.csv: Cleaned dataset
+- FAWN_report_features.csv: Feature-engineered dataset
+- FAWN_data_dictionary.csv: Data dictionary
+- FAWN_analysis_report.txt: This report
+
+================================================================================
